@@ -1,0 +1,63 @@
+
+   <div class="container" style="background-color:aliceblue">
+    
+    <div><br><br><h3>Welcome!!!!!!</h3></div>
+     
+    <div class="col-md-4" style="margin-left:700px;background-color:darkgray;"  >
+     
+     
+
+      
+        <div class="" >
+          <h3 style="color:brown;text-align:center">{{title}}</h3>
+          <form #loginform="ngForm" (ngSubmit)="addUser()">
+    
+    
+              
+           
+  
+            
+            <div class="form-outline mb-3">
+              <input type="email"  name="email" email [(ngModel)]="userSingnup.email" #email="ngModel" required class="form-control form-control-lg"
+                placeholder="Enter Email valid  Address" />
+                <span *ngIf="email.touched && email.invalid" style="color:red">enter valid email</span>
+              </div>
+  
+           
+  
+  
+  
+             
+  
+              
+  
+              <div class="form-outline mb-3">
+                <input type="password"  [(ngModel)]="userSingnup.password" name="password" #password="ngModel" required minlength="6" class="form-control form-control-lg"
+                  placeholder="enter password" />
+                  <span *ngIf="password.touched && password.invalid" style="color:red">enter  password</span>
+              </div>
+  
+           
+           
+  
+            <div class="d-flex justify-content-between align-items-center">
+             
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" value="submit" [disabled]="loginform.invalid" class="btn btn-dark btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">submit</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Want to sign? <a href="signup"
+                  class="link-danger" style="text-decoration: none;">Signup</a></p>
+            </div>
+  
+          </form>
+        </div>
+        
+  </div>
+        </div>
+  
+       
+      
+      
+      

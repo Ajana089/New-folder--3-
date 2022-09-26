@@ -1,0 +1,76 @@
+
+
+   
+     
+    <div class="container back" style="margin-top:100px;margin-left:400px;" >
+     
+     
+
+      
+        <div class="col-md-5 back" >
+        
+          <form (ngSubmit)="editBook()">
+    
+    
+              
+            <div class="form-outline mb-4">
+                <label for="Name of Book">BookName</label>
+              <input type="text"  name="fname"  [(ngModel)]="book.name" #fname="ngModel" required class="form-control form-control-lg"
+                 />
+                
+            </div>
+  
+            
+            <div class="form-outline mb-3">
+                <label for="Name of Book">Description</label>
+              <input type="text"  name="Description"  [(ngModel)]="book.description" #email="ngModel" required class="form-control form-control-lg"
+                />
+               
+            </div>
+  
+           
+  
+  
+  
+            <div class="form-outline mb-3">
+                <label for="Name of Book">Author</label>
+                <input type="text"  [(ngModel)]="book.author"  name="pnum" #pnum="ngModel" required    class="form-control form-control-lg"
+                 />
+                 
+              </div>
+  
+             
+  
+              
+  
+              <div class="form-outline mb-3">
+                <label for="Name of Book">Remark</label>
+                <input type="text"  [(ngModel)]="book.remark" name="password" #password="ngModel" required minlength="6" class="form-control form-control-lg"
+                  />
+                 
+              </div>
+  
+              
+            
+           
+  
+            <div class="d-flex justify-content-between align-items-center">
+             
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="submit" value="submit"  class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">submit</button>
+              
+            </div>
+  
+          </form>
+        </div>
+        
+  
+        </div>
+  
+       
+      
+      
+      

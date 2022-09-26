@@ -1,0 +1,10 @@
+.signup{
+    margin-left: 600px;
+}
+.login{
+    scroll-margin-right:100px;
+}
+
+.back{
+    background-image:url(/frontend/src/assets/background.jpg)
+}
