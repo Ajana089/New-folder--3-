@@ -15,6 +15,18 @@ const bookrouter=require('./src/routes/bookrouter')
 app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
+app.get('/', (req, res, next) => {
+
+  res.status(200).json({
+      status: 'success',
+      data: {
+          name: 'name of your app',
+          version: '0.1.0'
+      }
+  });
+
+});
+
 // const PORT=3000;
 // app.listen(PORT,()=>console.log("server is ready at 3000"))
 app.listen(process.env.PORT || 3000, () => {
