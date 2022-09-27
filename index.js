@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.get('/',function(req,res){
 
-  res.render('',{});
+  res.render('../frontend/src/app/home.component.html',{});
   
 });
 const signuprouter=require('./src/routes/singuprouter')
