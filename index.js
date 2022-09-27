@@ -7,6 +7,9 @@ app.use(cors());
 // var distDir = __dirname + "/dist/";
 //  app.use(express.static(distDir));
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
@@ -17,7 +20,9 @@ const bookrouter=require('./src/routes/bookrouter')
 app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
-
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '--index.html'));    
+});
 
  app.listen(process.env.PORT || 3000
  ,() => {
