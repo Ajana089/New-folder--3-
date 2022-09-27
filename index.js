@@ -4,8 +4,8 @@ const bodyParser=require('body-parser');//added bodyparser
 const cors = require('cors');
 const bcrypt=require('bcrypt');
 app.use(cors());
-var distDir = __dirname + "/dist/";
- app.use(express.static(distDir));
+// var distDir = __dirname + "/dist/";
+//  app.use(express.static(distDir));
 
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -19,7 +19,7 @@ app.use('/books',bookrouter);
 
 app.get('/',function(req,res){
 
-  res.render('',{});
+  
   
 });
 // const PORT=3000;
