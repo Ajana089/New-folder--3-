@@ -11,17 +11,19 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 
+app.get('/',function(req,res){
+
+  
+  
+});
+
 const signuprouter=require('./src/routes/singuprouter')
 const bookrouter=require('./src/routes/bookrouter')
 
 app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
-app.get('/',function(req,res){
 
-  
-  
-});
 // const PORT=3000;
 // app.listen(PORT,()=>console.log("server is ready at 3000"))
 app.listen(process.env.PORT || 3000, () => {
