@@ -20,7 +20,7 @@ error:any
       this.router.navigate(['login']);
   }, (err) => {
       this.error = err.message;
-      alert(err.message);
+      alert("  Email  already exists");
       
   });
 
@@ -43,7 +43,7 @@ error:any
                     }, 
 (err) => {
     this.error = err.message;
-    alert(err.message);
+    alert("pleas try to login with registered email and password");
 
 })
 }
