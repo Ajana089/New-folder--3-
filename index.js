@@ -3,6 +3,7 @@ const app=express();
 const bodyParser=require('body-parser');//added bodyparser 
 const cors = require('cors');
 const bcrypt=require('bcrypt');
+var path = require("path");
 app.use(cors());
 // var distDir = __dirname + "/dist/";
 //  app.use(express.static(distDir));
@@ -21,7 +22,7 @@ app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home.component.html'));    
+  res.sendFile(path.join(__dirname + 'home.component.html'));    
 });
 
  app.listen(process.env.PORT || 3000
