@@ -10,12 +10,12 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
-app.get('/',function(req,res){
+// app.get('/',function(req,res){
 
-  res.render('../frontendend/src/app/home.component',{});
-  //res.render('--index',{});
+//   res.render('../frontendend/src/app/home.component',{});
+//   //res.render('--index',{});
   
-});
+// });
 
 const signuprouter=require('./src/routes/singuprouter')
 const bookrouter=require('./src/routes/bookrouter')
