@@ -21,7 +21,7 @@ app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '--index.html'));    
+  res.sendFile(path.join(__dirname, 'home.component.html'));    
 });
 
  app.listen(process.env.PORT || 3000
