@@ -5,16 +5,13 @@ const cors = require('cors');
 const bcrypt=require('bcrypt');
 var path = require("path");
 app.use(cors());
-// var distDir = __dirname + "/dist/";
-//  app.use(express.static(distDir));
 
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+
 
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
-app.set('app','./frontend/src/app'); 
+//app.set('app','./frontend/src/app'); 
 
 const signuprouter=require('./src/routes/singuprouter')
 const bookrouter=require('./src/routes/bookrouter')
