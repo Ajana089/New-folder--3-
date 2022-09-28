@@ -7,11 +7,9 @@ var path = require("path");
 app.use(cors());
 
 
-
-
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
-//app.set('app','./frontend/src/app'); 
+
 
 const signuprouter=require('./src/routes/singuprouter')
 const bookrouter=require('./src/routes/bookrouter')
