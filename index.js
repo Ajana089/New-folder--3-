@@ -22,10 +22,11 @@ const bookrouter=require('./src/routes/bookrouter')
 app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
-app.get('/', (req, res) => {
-  //res.sendFile(path.join(__dirname ,'../frontend/src/app/home', 'home.component.html')); 
-  res.render('home.component',{})   
-});
+app.use(express.static('./dist/frontend'));
+
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/frontend/'}),
+);
 
  app.listen(process.env.PORT || 3000
  ,() => {
