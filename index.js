@@ -14,6 +14,7 @@ app.use(express.static(distDir));
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
+app.set('app','./frontend/src/app'); 
 
 const signuprouter=require('./src/routes/singuprouter')
 const bookrouter=require('./src/routes/bookrouter')
@@ -22,7 +23,8 @@ app.use('/user',signuprouter);
 app.use('/books',bookrouter);
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname ,'../frontend/src/app/home', 'home.component.html'));    
+  //res.sendFile(path.join(__dirname ,'../frontend/src/app/home', 'home.component.html')); 
+  res.render('home.component',{})   
 });
 
  app.listen(process.env.PORT || 3000
